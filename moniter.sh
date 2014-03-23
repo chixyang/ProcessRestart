@@ -20,7 +20,7 @@ proc_num
 number=$?
 if [ $number -eq 0 ]                                    # 判断进程是否存在
 then 
-	cd $host_dir/c_workspace/github_workspace/OilAgentServer/; ./OilAgentServer    # 重启进程
+	cd $host_dir/c_workspace/github_workspace/OilAgentServer/; exec ./OilAgentServer    # 重启进程
 	proc_id                                         # 获取新进程号
 	echo ${pid}, `date` >> $host_dir$file_name      # 将新进程号和重启时间记录
 fi
